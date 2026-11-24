@@ -1,0 +1,44 @@
+GUION BREVE PARA LA EXPOSICIÓN
+Actividad formativa 4: Implementación y análisis de un sistema de modulación en amplitud (AM)
+Estudiante: Israel Erasmo Maldonado Zamora
+
+DIAPOSITIVA 1. PORTADA
+"En esta actividad implementé un sistema de modulación en amplitud utilizando Python. El propósito fue observar la señal en el tiempo y en frecuencia y comprobar qué sucede cuando se presentan ruido, distorsión y atenuación."
+
+DIAPOSITIVA 2. ¿QUÉ ES AM?
+"La modulación en amplitud consiste en variar la amplitud de una portadora de alta frecuencia de acuerdo con una señal de información de baja frecuencia. La envolvente de la señal modulada contiene la forma del mensaje."
+
+DIAPOSITIVA 3. MODELO Y PARÁMETROS
+"Utilicé una señal de información de 500 Hz y una portadora de 10 kHz. La amplitud de la portadora es uno y el índice de modulación es 0.70. Como el índice es menor que uno, no se presenta sobremodulación. La frecuencia de muestreo fue de 200 kHz."
+
+DIAPOSITIVA 4. DOMINIO DEL TIEMPO
+"La gráfica muestra primero el mensaje, después la portadora y finalmente la señal AM. Se observa que la portadora tiene muchos ciclos y que su envolvente cambia siguiendo la forma del mensaje."
+
+DIAPOSITIVA 5. DOMINIO DE LA FRECUENCIA
+"En el espectro se distingue la portadora en 10 kHz y dos bandas laterales en 9.5 y 10.5 kHz. Para el índice de modulación utilizado, cada banda lateral tiene una amplitud teórica de 0.35."
+
+DIAPOSITIVA 6. RUIDO Y DISTORSIÓN
+"Al agregar ruido blanco con una SNR objetivo de 15 dB, la SNR medida fue de 14.92 dB. La señal presenta fluctuaciones y la recuperación del mensaje pierde precisión. En el escenario de distorsión se recortaron los picos a más o menos 1.25; el 15.25 por ciento de las muestras resultó afectado. El recorte cambia la forma de onda y no se corrige simplemente aumentando la ganancia."
+
+DIAPOSITIVA 7. ATENUACIÓN Y DESEMPEÑO
+"Con una ganancia de canal de 0.50, la amplitud queda en la mitad y la potencia disminuye 6.02 dB. La forma de onda se conserva porque la atenuación es lineal. En la simulación compensé esa ganancia conocida; en un receptor real se necesitaría calibración o control automático de ganancia."
+
+DIAPOSITIVA 8. CONCLUSIONES
+"La simulación confirmó el comportamiento esperado de AM. El ruido agrega variaciones aleatorias, el recorte genera distorsión no lineal y la atenuación reduce el nivel de señal. Para preservar la comunicación es importante mantener una envolvente adecuada y controlar las condiciones del canal."
+
+PREGUNTAS QUE PUEDEN HACER
+
+1. ¿Qué representa el índice de modulación?
+Es la proporción de variación de la amplitud de la portadora causada por el mensaje. Para AM convencional se busca que no supere 1 si se desea evitar sobremodulación.
+
+2. ¿Por qué aparecen dos bandas laterales?
+Porque la multiplicación del mensaje senoidal por la portadora produce componentes en la suma y en la diferencia de sus frecuencias: fc + fm y fc - fm.
+
+3. ¿Cuál es la diferencia entre atenuación y distorsión?
+La atenuación reduce el nivel de la señal, pero puede conservar su forma. La distorsión altera la forma de onda y puede generar componentes adicionales.
+
+4. ¿Qué hace el ruido?
+Agrega una señal aleatoria que se superpone a la señal útil y dificulta la recuperación del mensaje.
+
+5. ¿Por qué se usó la transformada de Hilbert?
+Para obtener una señal analítica y estimar la envolvente de la AM. Es un método matemático idealizado para el análisis, no la descripción de un circuito físico completo.
